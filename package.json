@@ -2,6 +2,7 @@
   "name": "@abhijithvijayan/medicine-intake-notifier",
   "version": "0.0.1",
   "description": "A simple notifier",
+  "main": "index.js",
   "private": true,
   "repository": "https://github.com/abhijithvijayan/medicine-intake-notifier.git",
   "author": {

@@ -63,6 +63,12 @@ async function trigger() {
     } catch (err) {
       console.log('[ERROR]: Something went wrong', err);
     }
+  } else {
+    console.log({
+      currentSeconds,
+      notificationTimeInSeconds,
+      max: notificationTimeInSeconds + offsetInSeconds,
+    });
   }
 }
 
