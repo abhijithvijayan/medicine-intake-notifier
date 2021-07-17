@@ -64,11 +64,7 @@ async function trigger() {
       console.log('[ERROR]: Something went wrong', err);
     }
   } else {
-    console.log({
-      currentSeconds,
-      notificationTimeInSeconds,
-      max: notificationTimeInSeconds + offsetInSeconds,
-    });
+    console.log('[INFO]: Nope, not yet!');
   }
 }
 
