@@ -1,0 +1,43 @@
+{
+  "name": "@abhijithvijayan/medicine-intake-notifier",
+  "version": "0.0.1",
+  "description": "A simple notifier",
+  "private": true,
+  "repository": "https://github.com/abhijithvijayan/medicine-intake-notifier.git",
+  "author": {
+    "name": "abhijithvijayan",
+    "email": "email@abhijithvijayan.in",
+    "url": "https://abhijithvijayan.in"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.15.4"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --fix --ext .js,.ts"
+  },
+  "dependencies": {
+    "@abhijithvijayan/ts-utils": "^1.2.2",
+    "@abhijithvijayan/vaccine-notifier-utils": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@abhijithvijayan/eslint-config": "2.6.3",
+    "@abhijithvijayan/eslint-config-airbnb": "^1.0.2",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.4",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.2"
+  }
+}
