@@ -15,11 +15,6 @@
   resolved "https://registry.yarnpkg.com/@abhijithvijayan/eslint-config/-/eslint-config-2.6.3.tgz#3f560c99ce4e9631a404d956c4396835e1e52aa7"
   integrity sha512-njS8R0Q4FAtealxY48CmL8Ms58xPPqTZAcabB+92mogmfVkkHOlgb8kHfhW1PZpbe9xhHkKR5HwrkdMPNbMoiA==
 
-"@abhijithvijayan/ts-utils@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@abhijithvijayan/ts-utils/-/ts-utils-1.2.2.tgz#1c166e707e9fcb483740b4e94e724d6ac645ece4"
-  integrity sha512-dV/n/vHC2pfXdU+AMT21gJ3qSb4V6e2forDSPAz0NLBVvCOPJCb7WP/BAi/Z5KSXeAO3IIMpIAQywEV1kIv/aQ==
-
 "@abhijithvijayan/vaccine-notifier-utils@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@abhijithvijayan/vaccine-notifier-utils/-/vaccine-notifier-utils-1.1.0.tgz#acb8546089b985b654a9e86318d7eba20beaf919"
@@ -719,6 +714,13 @@ define-properties@^1.1.3:
   integrity sha512-3MqfYKj2lLzdMSf8ZIZE/V+Zuy+BgD6f164e8K2w7dgnpKArBDerGYpM46IYYcjnkdPNMjPk9A6VFB8+3SKlXQ==
   dependencies:
     object-keys "^1.0.12"
+
+deta@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/deta/-/deta-0.0.8.tgz#9195b13d34b92ba6492ffe35e3c1331d45434a19"
+  integrity sha512-yUABLzs340aKs8UYHAP+n3Ngo5w8TrnstQcwy5wSsxcr9pWy6vvmwP7d75hfkr6FLdeZPwVzA2tUZRyxWuLEVA==
+  dependencies:
+    node-fetch "^2.6.0"
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -1572,7 +1574,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-node-fetch@^2.6.1:
+node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==

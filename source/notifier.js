@@ -4,6 +4,7 @@ const {
   timezoneOffset,
 } = require('@abhijithvijayan/vaccine-notifier-utils');
 const fetch = require('node-fetch');
+const {app} = require('deta');
 
 const {TELEGRAM_CHAT_ID = '', TELEGRAM_BOT_TOKEN = ''} = process.env;
 
@@ -43,7 +44,7 @@ function sendTelegramMessage(data) {
   });
 }
 
-const main = async () => {
+async function trigger() {
   const notificationTimeInSeconds = notificationHour * 60 * 60;
   const offsetInSeconds = offsetMinutes * 60;
   const currentSeconds = getCurrentTimeInSeconds();
@@ -63,6 +64,14 @@ const main = async () => {
       console.log('[ERROR]: Something went wrong', err);
     }
   }
-};
+}
 
-main();
+function start(_event) {
+  return trigger();
+}
+
+// https://docs.deta.sh/docs/micros/run#run-and-cron
+app.lib.run(start);
+app.lib.cron(start);
+
+module.exports = app;
