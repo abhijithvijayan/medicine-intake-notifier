@@ -7,6 +7,19 @@ const fetch = require('node-fetch');
 
 const {TELEGRAM_CHAT_ID = '', TELEGRAM_BOT_TOKEN = ''} = process.env;
 
+// will send notification at 10:00am and 10:00pm
+const notificationHour = 10;
+// offset time to send notification between 10:00 - 10:05
+const offsetMinutes = 5;
+
+function getCurrentTimeInSeconds() {
+  const today = adjustForTimezone(new Date(), timezoneOffset);
+  const hour = today.getHours();
+  const minutes = today.getMinutes();
+
+  return hour * 60 * 60 + minutes * 60; // ignoring seconds here
+}
+
 function getPayload(data) {
   return `
           Timestamp: ${new Intl.DateTimeFormat('en-GB', {
@@ -31,15 +44,24 @@ function sendTelegramMessage(data) {
 }
 
 const main = async () => {
-  const data = {
-    message: 'hello',
-  };
+  const notificationTimeInSeconds = notificationHour * 60 * 60;
+  const offsetInSeconds = offsetMinutes * 60;
+  const currentSeconds = getCurrentTimeInSeconds();
 
-  try {
-    await sendTelegramMessage(data);
-    console.log('[SUCCESS]: Notification sent.');
-  } catch (err) {
-    console.log('[ERROR]: Something went wrong', err);
+  if (
+    currentSeconds >= notificationTimeInSeconds &&
+    currentSeconds < notificationTimeInSeconds + offsetInSeconds
+  ) {
+    const data = {
+      message: 'Take Medicine',
+    };
+
+    try {
+      await sendTelegramMessage(data);
+      console.log('[SUCCESS]: Notification sent.');
+    } catch (err) {
+      console.log('[ERROR]: Something went wrong', err);
+    }
   }
 };
 
