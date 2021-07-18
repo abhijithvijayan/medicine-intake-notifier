@@ -15,7 +15,7 @@ const offsetMinutes = 5;
 
 function getCurrentTimeInSeconds() {
   const today = adjustForTimezone(new Date(), timezoneOffset);
-  const hour = today.getHours();
+  const hour = today.getHours() % 12; // convert to 12 hours time
   const minutes = today.getMinutes();
 
   return hour * 60 * 60 + minutes * 60; // ignoring seconds here
